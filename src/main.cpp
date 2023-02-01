@@ -87,6 +87,7 @@ void sendMessage() {
   if (calc_delay) {
     SimpleList<uint32_t>::iterator node = nodes.begin();
     while (node != nodes.end()) {
+      // Response in cb_NodeDelayReceived
       mesh.startDelayMeas(*node);
       node++;
     }
