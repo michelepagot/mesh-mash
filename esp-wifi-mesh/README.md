@@ -37,9 +37,13 @@ The project structure has been bootstraped using the `idf.py` tool like:
 % idf.py set-target esp32
 % idf.py menuconfig
 ```
+
 I just edited `esp-wifi-mesh/main/esp-wifi-mesh.c` to print something and then I build
 
+## Run the code
+
 ```
+% export IDF_TOOLS_PATH=<SOMEWHERE>/idf_tools
 % idf.py build
 ```
 
@@ -57,4 +61,3 @@ In case you need more control during the flashing it is possible to check the co
 ```
 % python ${IDF_PATH}/components/esptool_py/esptool/esptool.py -p /dev/ttyUSB0 -b 921600 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size detect 0x1000 build/bootloader/bootloader.bin 0x10000 build/esp-wifi-mesh.bin 0x8000 build/partition_table/partition-table.bin
 ```
-
