@@ -1,2 +1,2 @@
-idf_component_register(SRCS "esp-wifi-mesh.c"
+idf_component_register(SRCS "udp_srv.c"
                     INCLUDE_DIRS ".")
